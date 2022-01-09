@@ -15,7 +15,7 @@
     </label> <br>
     <label>
         Lãi Suất Năm:
-        <input type="text" name="year" placeholder="Số Năm">
+        <input type="text" name="year" placeholder="Lãi Suất">
     </label> <br>
     <label>
         Số Năm Đầu Tư:
@@ -26,26 +26,22 @@
 
 
 <?php
-
-if ($_SERVER['REQUEST_METHOD']=='POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $money = $_POST['money'];
     $year = $_POST['year'];
     $namYear = $_POST['namYear'];
 
-$aYear = $money+($money*$year);
-$future = $aYear;
-for ($i=0;$i<$namYear;$i++){
-    $future += $future;
+    $aYear = $money + ($money * ($year / 100));
+    $uoctinh = $aYear;
+    for ($i = 1; $i <= $namYear; $i++) {
+        if ($i > 1) {
+            $uoctinh = $uoctinh + ($uoctinh * ($year / 100));
+        } else if ($namYear == 1) {
+            $uoctinh ;
+        }
+    }
+    echo $uoctinh;
 }
-
-echo $future;
-}
-
-
-
-
 ?>
-
-
 </body>
 </html>
