@@ -9,20 +9,23 @@
 </head>
 <body>
 <form action="display_discount.php" method="post">
-    <label>
-        Product Description:
-        <input type="text" name="sanPham" placeholder="Mô Tả Sản Phẩm">
-    </label> <br>
-    <label>
-        List Price:
-        <input type="text" name="giaNiemYet" placeholder="Giá Niêm Yết">
-    </label> <br>
-    <label>
-        Discount Percent:
-        <input type="text" name="phanTram" placeholder="Tỷ Lệ Chiết Khấu">
-    </label> <br>
-
-    <input type="submit" value="Calculate Discount">
+    <table>
+        <tr>
+            <td>Product Description:</td>
+            <td><input type="text" name="sanPham" placeholder="Mô Tả Sản Phẩm"></td>
+        </tr>
+        <tr>
+            <td>List Price:</td>
+            <td> <input type="text" name="giaNiemYet" placeholder="Giá Niêm Yết"></td>
+        </tr>
+        <tr>
+            <td>Discount Percent:</td>
+            <td><input type="text" name="phanTram" placeholder="Tỷ Lệ Chiết Khấu"></td>
+        </tr>
+        <tr>
+            <th colspan="2"><input type="submit" value="Calculate Discount"></th>
+        </tr>
+    </table>
 
 </form>
 </body>
